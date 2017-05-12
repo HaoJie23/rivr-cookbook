@@ -53,8 +53,8 @@ public class DialogueTest {
 
         mChannel.processNoAction();
         VariableList expectedVariables = new VariableList();
-        expectedVariables.addWithExpression("status", "'success'");
-        expectedVariables.addWithExpression("number", "'123456'");
+        expectedVariables.addWithExpression("status", "\"success\"");
+        expectedVariables.addWithExpression("number", "\"123456\"");
         assertExit(expectedVariables);
     }
 
@@ -83,7 +83,7 @@ public class DialogueTest {
 
         mChannel.processNoAction();
         VariableList expectedVariables = new VariableList();
-        expectedVariables.addWithExpression("status", "'error'");
+        expectedVariables.addWithExpression("status", "\"error\"");
         assertExit(expectedVariables);
     }
 
@@ -112,7 +112,7 @@ public class DialogueTest {
 
         mChannel.processNoAction();
         VariableList expectedVariables = new VariableList();
-        expectedVariables.addWithExpression("status", "'error'");
+        expectedVariables.addWithExpression("status", "\"error\"");
         assertExit(expectedVariables);
     }
 
@@ -132,7 +132,7 @@ public class DialogueTest {
 
         mChannel.processEvent("unexpectedevent");
         VariableList expectedVariables = new VariableList();
-        expectedVariables.addWithExpression("status", "'error'");
+        expectedVariables.addWithExpression("status", "\"error\"");
         assertExit(expectedVariables);
     }
 
